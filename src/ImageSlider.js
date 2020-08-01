@@ -9,9 +9,16 @@ export default class ImageSlider extends Component {
     }
   }
   
+  // slider = () => {
+  //   slideIndex = this.state.currentSlideIndex + 1
+  //   this.setState({currentSlideIndex: slideIndex})
+  // }
+  
+  
   slider = () => {
-    slideIndex = this.state.currentSlideIndex + 1
-    this.setState({currentSlideIndex: slideIndex})
+    this.setState(prevState => {
+      return (currentSlideIndex: prevState.currentSlideIndex + 1)
+    })
   }
   
   render() {
